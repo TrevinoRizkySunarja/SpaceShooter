@@ -19,7 +19,7 @@ export class Player extends Actor {
         this.graphics.use(playerSprite);
         this.laserTimer = 0;
         this.bombTimer = 0;
-        this.fullAutoTimer = 0; // Timer voor full-auto modus
+        this.fullAutoTimer = 0;
     }
 
     onPreUpdate(engine, delta) {
@@ -35,14 +35,14 @@ export class Player extends Actor {
         if (this.isFullAuto) {
             if (kb.isHeld(Input.Keys.Space) && this.laserTimer <= 0 && this.game.laserCount > 0) {
                 this.shoot();
-                this.laserTimer = 0.1; // Sneller schieten in full-auto modus
+                this.laserTimer = 0.1;
                 this.game.laserCount--;
                 this.game.updateLaserCount(this.game.laserCount);
             }
         } else {
             if (kb.wasPressed(Input.Keys.Space) && this.laserTimer <= 0 && this.game.laserCount > 0) {
                 this.shoot();
-                this.laserTimer = 0.1; // Langzamer schieten in enkel schot modus
+                this.laserTimer = 0.1; 
                 this.game.laserCount--;
                 this.game.updateLaserCount(this.game.laserCount);
             }

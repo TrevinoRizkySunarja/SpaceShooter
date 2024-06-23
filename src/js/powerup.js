@@ -22,7 +22,7 @@ export class PowerUp extends Actor {
     onInitialize(engine) {
         this.on('collisionstart', (evt) => {
             if (evt.other instanceof Player) {
-                evt.other.enableFullAuto(); // Activeer full-auto modus
+                evt.other.enableFullAuto(); 
                 this.kill();
             }
         });

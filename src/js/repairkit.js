@@ -22,7 +22,7 @@ export class RepairKit extends Actor {
     onInitialize(engine) {
         this.on('collisionstart', (evt) => {
             if (evt.other instanceof Player) {
-                this.game.increaseLife(); // Verhoog levens met één
+                this.game.increaseLife();
                 this.kill();
             }
         });

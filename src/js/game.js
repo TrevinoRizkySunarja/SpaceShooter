@@ -30,11 +30,11 @@ class Game extends Engine {
         console.log("Game initialized");
 
         this.background = new Background(this.drawWidth, this.drawHeight);
-        this.background.z = -10; // Zet de achtergrond nog lager dan de planeten
+        this.background.z = -10; 
         this.add(this.background);
 
         this.player = new Player(this);
-        this.player.z = 10; // Zorg ervoor dat de speler boven de planeten staat
+        this.player.z = 10; 
         this.add(this.player);
 
         this.spawnAliens();
@@ -45,13 +45,13 @@ class Game extends Engine {
         this.spawnStars();
         this.spawnBatteries();
 
-        const labelColor = Color.White; // Kies een kleur die beter zichtbaar is, bijvoorbeeld wit
+        const labelColor = Color.White; 
 
         this.scoreLabel = new Label({
             text: 'Score: 0',
             pos: new Vector(50, 50),
             font: new Font({ size: 24, color: labelColor }),
-            z: 10 // Zorg ervoor dat labels boven de planeten staan
+            z: 10 
         });
         this.add(this.scoreLabel);
 
@@ -59,7 +59,7 @@ class Game extends Engine {
             text: 'Lasers: 100',
             pos: new Vector(50, 80),
             font: new Font({ size: 24, color: labelColor }),
-            z: 10 // Zorg ervoor dat labels boven de planeten staan
+            z: 10 
         });
         this.add(this.laserLabel);
 
@@ -67,7 +67,7 @@ class Game extends Engine {
             text: 'Bombs: 3',
             pos: new Vector(50, 110),
             font: new Font({ size: 24, color: labelColor }),
-            z: 10 // Zorg ervoor dat labels boven de planeten staan
+            z: 10 
         });
         this.add(this.bombLabel);
 
@@ -75,7 +75,7 @@ class Game extends Engine {
             text: 'Lives: 3',
             pos: new Vector(50, 140),
             font: new Font({ size: 24, color: labelColor }),
-            z: 10 // Zorg ervoor dat labels boven de planeten staan
+            z: 10 
         });
         this.add(this.lifeLabel);
     }
@@ -241,7 +241,7 @@ class Game extends Engine {
             }
         });
 
-r
+
         this.player = new Player(this);
         this.player.z = 10;
         this.add(this.player);

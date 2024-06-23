@@ -8,10 +8,10 @@ export class Laser extends Actor {
             pos: pos,
             width: 5,
             height: 20,
-            collisionType: CollisionType.Active // Ensure active collision
+            collisionType: CollisionType.Active 
         });
 
-        this.game = game; // Store the game instance
+        this.game = game; 
 
         const laserSprite = Resources.Laser.toSprite();
         laserSprite.width = 5;
@@ -30,9 +30,9 @@ export class Laser extends Actor {
     onInitialize(engine) {
         this.on('collisionstart', (evt) => {
             if (evt.other instanceof Alien) {
-                evt.other.kill(); // Ensure the alien is killed
-                this.kill(); // Destroy the laser
-                this.game.increaseScore(); // Increment score
+                evt.other.kill(); 
+                this.kill(); 
+                this.game.increaseScore(); 
             }
         });
     }
